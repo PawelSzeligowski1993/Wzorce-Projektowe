@@ -22,7 +22,7 @@ public class Main {
         System.out.println(house);
 
         //Builder Clasic
-        System.out.println("---BuilderClasic---\n");
+        System.out.println("---BuilderClasic---\n\n");
         SmallHouseBuilder smallHouseBuilder = new SmallHouseBuilder();
         BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
 
