@@ -3,7 +3,7 @@
  */
 package creativePatterns._01_Builder.hause.hauseBuilder;
 
-public class Hause {
+public class House {
 
     private String walls;
     private String floors;
@@ -14,7 +14,7 @@ public class Hause {
     private String garage;
 
     //Prywatny konstruktor z klasy HauseBilder
-    private Hause(HauseBuilder hauseBuilder){
+    private House(HauseBuilder hauseBuilder){
         this.walls = hauseBuilder.walls;
         this.floors = hauseBuilder.floors;
         this.rooms = hauseBuilder.rooms;
@@ -47,7 +47,7 @@ public class Hause {
     }
     @Override
     public String toString() {
-        return "Hause{" +
+        return "HouseBuilder{" +
                 "walls='" + walls + '\'' +
                 ", floors='" + floors + '\'' +
                 ", rooms='" + rooms + '\'' +
@@ -97,8 +97,8 @@ public class Hause {
             return this;
         }
 
-        public Hause build(){
-            return new Hause(this);
+        public House build(){
+            return new House(this);
         }
     }
 }
