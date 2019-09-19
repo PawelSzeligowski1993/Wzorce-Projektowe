@@ -15,5 +15,7 @@ public class Main {
                 .buildRooms("rooms")
                 .build();
         System.out.println(hause);
+        System.out.println(hause);
+
     }
 }
