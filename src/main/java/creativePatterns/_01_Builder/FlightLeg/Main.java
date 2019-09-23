@@ -9,7 +9,6 @@ public class Main {
                 .buildAirPlane("Boeing 737")
                 .build();
         System.out.println(flightLeg);
-
         flightLeg.setDelayed(true);
         System.out.println(flightLeg);
     }
