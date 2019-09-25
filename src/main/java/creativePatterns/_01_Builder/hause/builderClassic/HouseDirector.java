@@ -1,4 +1,4 @@
-package creativePatterns._01_Builder.hause.builderClasic;
+package creativePatterns._01_Builder.hause.builderClassic;
 
 public class HouseDirector {
     private HouseBuilder houseBuilder;
@@ -17,7 +17,7 @@ public class HouseDirector {
         houseBuilder.buildGarage();
     }
 
-    public HouseClasic getHouseClasic(){
-        return this.houseBuilder.getHouseClasic();
+    public HouseClassic getHouseClasic(){
+        return this.houseBuilder.getHouseClassic();
     }
 }

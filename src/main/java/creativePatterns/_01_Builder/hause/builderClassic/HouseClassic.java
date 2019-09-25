@@ -1,6 +1,6 @@
-package creativePatterns._01_Builder.hause.builderClasic;
+package creativePatterns._01_Builder.hause.builderClassic;
 
-public class HouseClasic {
+public class HouseClassic {
     private String walls;
     private String floors;
     private String rooms;

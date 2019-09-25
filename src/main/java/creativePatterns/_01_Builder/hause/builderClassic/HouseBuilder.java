@@ -1,4 +1,4 @@
-package creativePatterns._01_Builder.hause.builderClasic;
+package creativePatterns._01_Builder.hause.builderClassic;
 
 public interface HouseBuilder {
     void buildWalls();
@@ -9,5 +9,5 @@ public interface HouseBuilder {
     void buildDoors();
     void buildGarage();
 
-    HouseClasic getHouseClasic();
+    HouseClassic getHouseClassic();
 }
