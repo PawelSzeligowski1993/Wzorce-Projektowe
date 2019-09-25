@@ -14,6 +14,10 @@ public class BuildingClassic {
         this.buildName = buildName;
     }
 
+    public String getBuildName() {
+        return buildName;
+    }
+
     public void setGold(int gold) {
         this.gold = gold;
     }
