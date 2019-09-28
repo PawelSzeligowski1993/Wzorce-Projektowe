@@ -1,7 +1,7 @@
 package creativePatterns._02_Factory.strategyGame.units;
 
-public class Tank extends MechanizedUnit {
-    Tank(int hp, int exp, int dmgDone) {
+public class Helicopter extends AirUnit {
+    protected Helicopter(int hp, int exp, int dmgDone) {
         super(hp, exp, dmgDone);
     }
 }

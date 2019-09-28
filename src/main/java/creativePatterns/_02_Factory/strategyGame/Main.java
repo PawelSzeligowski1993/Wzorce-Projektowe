@@ -1,17 +1,19 @@
 package creativePatterns._02_Factory.strategyGame;
 
-import creativePatterns._02_Factory.strategyGame.units.Factory;
-import creativePatterns._02_Factory.strategyGame.units.Unit;
-import creativePatterns._02_Factory.strategyGame.units.UnitFactory;
-import creativePatterns._02_Factory.strategyGame.units.UnitType;
+import creativePatterns._02_Factory.strategyGame.units.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Factory factory = new UnitFactory();
+        Factory blufactory = new BlueFactory();
+        Factory redFactory = new RedFactory();
 
-        Unit tank = factory.createUnit(UnitType.TANK);
-        Unit infantryman = factory.createUnit(UnitType.RIFLEMAN);
+        MechanizedUnit redTank = redFactory.createMechanizedUnit(UnitType.TANK);
+        InfantryUnit redInfantry = redFactory.createInfantryUnit(UnitType.RIFLEMAN);
+        AirUnit redHelicopter = redFactory.createAirUnit(UnitType.Helicopter);
 
+        MechanizedUnit blueTank = blufactory.createMechanizedUnit(UnitType.TANK);
+        InfantryUnit blueInfantry = blufactory.createInfantryUnit(UnitType.RIFLEMAN);
+        AirUnit blueHelicopter = blufactory.createAirUnit(UnitType.Helicopter);
     }
 }
