@@ -22,7 +22,6 @@ public class Main {
             }
         };
 
-        //Adapter implement
         TwoWayAdapter adapter = new TwoWayAdapter(ukRadio,continentalRadio);
         continentalSocket.plugIn(adapter);
         ukdSocket.plugIn(adapter);
