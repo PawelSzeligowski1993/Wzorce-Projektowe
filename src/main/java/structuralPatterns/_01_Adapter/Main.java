@@ -5,24 +5,29 @@ import structuralPatterns._01_Adapter.socketAdapter.*;
 public class Main {
     public static void main(String[] args) {
 
-        ContinentalDevice radio = new ContinentalDevice() {
-            public void on() {
-                System.out.println("Gra muzyka");
-            }
-        };
-
         ContinentalSocket continentalSocket = new ContinentalSocket();
-        continentalSocket.plugIn(radio);
+
+
+
+        UKDSocket ukdSocket = new UKDSocket();
         UKDDevice ukRadio = new UKDDevice() {
             public void powerOn() {
                     System.out.println("London calling to the farway towns\n");
             }
         };
 
+        ContinentalDevice continentalRadio = new ContinentalDevice() {
+            public void on() {
+                System.out.println("London calling to the underworld");
+            }
+        };
+
         //Adapter implement
-        UKDSocket ukdSocket = new UKDSocket();
-        ukdSocket.plugIn(ukRadio);
-        UKToContinentalAdapter adapter = new UKToContinentalAdapter(ukRadio);
+        TwoWayAdapter adapter = new TwoWayAdapter(ukRadio,continentalRadio);
         continentalSocket.plugIn(adapter);
+        ukdSocket.plugIn(adapter);
+
+
+
     }
 }
